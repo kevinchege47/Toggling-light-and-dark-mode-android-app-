@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         imageview = findViewById(R.id.imageview);
         switchcompat = findViewById(R.id.switchcompat);
         sharedPreferences = getSharedPreferences("night",0);
-        Boolean booleanValue = sharedPreferences.getBoolean("nightmode",true);
+        Boolean booleanValue = sharedPreferences.getBoolean("nightmode",false);
         if(booleanValue){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            switchcompat.setChecked(true);
+            switchcompat.setChecked(false);
             imageview.setImageResource(R.drawable.night);
         }
         switchcompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
